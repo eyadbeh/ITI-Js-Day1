@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Lab5</title>
+  </head>
+
+  <body>
+    <!-- 1- -->
+    <button id="nextBtn">Next</button>
+    <button id="prevBtn">Previous</button>
+    <button id="auto">Slide Show</button>
+    <button id="stop">Stop</button>
+    <br /><br /><br />
+    <img
+      src="images/1.jpg"
+      alt="sora"
+      style="margin: auto"
+      width="400px"
+      height="400px"
+    />
+
+    <br /><br /><br />
+    <hr />
+    <br /><br /><br />
+
+    <!-- 2- -->
+    <form id="studentForm">
+      <div>
+        <label>Department:</label>
+        <input type="radio" name="dept" value="SD" />SD
+        <input type="radio" name="dept" value="OS" />OS
+        <input type="radio" name="dept" value="EL" />EL &nbsp; &nbsp;<span
+          id="deptError"
+          style="color: red"
+        ></span>
+      </div>
+      <br />
+      <div>
+        <label>Student Name</label><br />
+        <input type="text" id="studentName" />
+        <span id="nameError" style="color: red"></span>
+      </div>
+      <br />
+      <div>
+        <label>Student Grade</label><br />
+        <input type="text" id="studentGrade" />
+        <span id="gradeError" style="color: red"></span>
+      </div>
+      <br />
+      <button type="submit" id="add">Add</button>
+    </form>
+    <br /><br />
+    <div>
+      <label>Sort</label>
+      <select id="sortSelect">
+        <option>---</option>
+        <option value="name">Name</option>
+        <option value="grade">Grade</option>
+      </select>
+    </div>
+    <br />
+    <div>
+      <label>Filter</label>
+      <select id="filterSelect">
+        <option value="all">All</option>
+        <option value="success">Grade>60</option>
+        <option value="fail">Grade<60</option>
+      </select>
+    </div>
+    <br />
+
+    <table border="1px" id="studentTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Department</th>
+          <th>Grade</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <br /><br /><br />
+    <hr />
+    <br /><br /><br />
+
+    <script src="main.js"></script>
+  </body>
+</html>
