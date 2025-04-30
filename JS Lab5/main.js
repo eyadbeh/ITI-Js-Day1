@@ -138,8 +138,8 @@ sortSelect.onchange = function () {
 
     if (this.value === "name") {
         rows.sort((a, b) => {
-            let nameA = a.cells[0].textContent.toLowerCase();
-            let nameB = b.cells[0].textContent.toLowerCase();
+            let nameA = a.cells[0].textContent;
+            let nameB = b.cells[0].textContent;
             return nameA.localeCompare(nameB);
         });
     } else if (this.value === "grade") {
