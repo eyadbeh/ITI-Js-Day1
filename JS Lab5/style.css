@@ -1,0 +1,17 @@
+table {
+    margin: 20px;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+th {
+    background: grey;
+    color: white;
+}

@@ -3,7 +3,7 @@ function styleEvenRows() {
     rows.forEach((row, index) => {
         row.style.backgroundColor = (index % 2 === 0) ? "#d9d9d9" : "white";
     });
-    };
+};
 
 function addTask() {
     let input = document.getElementById("taskInput");

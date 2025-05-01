@@ -44,6 +44,24 @@ let gradeError = document.getElementById("gradeError");
 let tableBody = document.getElementById("studentTable").querySelector("tbody");
 deptError = document.getElementById("deptError");
 
+function styleGrades() {
+    let rows = tableBody.querySelectorAll("tr");
+
+    rows.forEach(row => {
+        let grade = Number(row.cells[2].textContent);
+
+    if(grade >= 75) {
+        row.style.backgroundColor = "green";
+    }
+    else if(grade >= 60 && gradeInput.value.trim() <75){
+        row.style.backgroundColor = "yellow";
+    }
+    else{
+        row.style.backgroundColor = "red";
+    }
+    });
+};
+
 form.onsubmit = function (event) {
     event.preventDefault();
 
@@ -83,7 +101,7 @@ form.onsubmit = function (event) {
         nameError.textContent = "* Student name already exists";
         return;
     }
-
+    grade = grade.replace(/^0+/, '');
     if (grade === "") {
         gradeError.textContent = "* Student grade can't be empty";
         return;
@@ -112,6 +130,7 @@ form.onsubmit = function (event) {
     nameInput.value = "";
     gradeInput.value = "";
     document.querySelectorAll('input[name="dept"]').forEach(radio => radio.checked = false);
+    styleGrades();
 };
 
 let filterSelect = document.getElementById("filterSelect");
