@@ -1,3 +1,10 @@
+function styleEvenRows() {
+    let rows = document.querySelectorAll("tr");
+    rows.forEach((row, index) => {
+        row.style.backgroundColor = (index % 2 === 0) ? "#d9d9d9" : "white";
+    });
+    };
+
 function addTask() {
     let input = document.getElementById("taskInput");
     let task = input.value.trim();
@@ -16,6 +23,7 @@ function addTask() {
         '<button class="delete" onclick="deleteTask(this)">Delete</button>';
 
     input.value = "";
+    styleEvenRows()
 }
 
 function markDone(checkbox) {
@@ -26,4 +34,5 @@ function markDone(checkbox) {
 function deleteTask(span) {
     let row = span.closest("tr");
     row.remove();
+    styleEvenRows()
 }
